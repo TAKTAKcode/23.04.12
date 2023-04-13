@@ -11,10 +11,35 @@ public class Main {
         //값을 담는 Str[] 선언..
         String[] str = new String[5];
 
+        String prnt = "";
 
+        for (int i = 0; i < 5; i++) {
 
-        //아... 요즘 일도 너무 많고 피곤해서.. 도저히 머리를 못쓰겠다...
+            str[i] = sc.next();
 
+        }
+
+        int flag;
+        int idx = 0;
+
+        while(true) {
+
+            flag = 0;
+
+            for (int i = 0; i < 5; i++) {
+
+                if (idx < str[i].length()) {
+                    flag = 1;
+                    prnt += str[i].charAt(idx);
+                }
+
+            }
+
+            if (flag == 0) break;
+            idx++;
+        }
+
+        System.out.println(prnt);
 
     }
 
